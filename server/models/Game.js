@@ -1,9 +1,10 @@
 const R = require('ramda');
 const {
-  EMPTY,
   WIN_COLS_POS,
   WIN_ROWS_POS,
-  WIN_DIA_POS
+  WIN_DIA_POS,
+  ILLEGAL_MOVE,
+  EMPTY
 } = require('../consts');
 const State = require('./State');
 
@@ -27,10 +28,14 @@ module.exports = class Game {
   to_move(state) {
     return state.turn === this.ai ? this.human : this.ai;
   }
-  make_move(pos, state) {
-    const board = state.board.filter(cell => cell.pos !== pos);
+  make_move(state, move) {
+
+    if (state.board.find(cell => cell.pos === move).player !== EMPTY) {
+      throw Error(ILLEGAL_MOVE);
+    }
+    const board = state.board.filter(cell => cell.pos !== move);
     const player = state.turn;
-    board.push({ pos, player });
+    board.push({ pos: move, player });
     const turn = this.to_move(state);
     const utility = this.compute_utility(board, player);
     return new State(turn, board, utility);
@@ -60,7 +65,7 @@ module.exports = class Game {
     return this
       .legal_moves(state)
       .map(pos => {
-        return ({ state: this.make_move(pos, state), pos: pos });
+        return ({ state: this.make_move(state, pos), pos: pos });
       });
   }
 
