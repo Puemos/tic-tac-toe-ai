@@ -1,18 +1,4 @@
-const R = require('ramda');
-
-function random_int(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-const random_element = list => {
-  const max = R.reduce(R.maxBy(i => i), -Infinity, list.map(R.prop('val')));
-  const max_elements = list.filter(R.propEq('val', max));
-  return R.nth(random_int(0, max_elements.length), max_elements);
-};
-
-module.exports = function alphabeta_search(game, state, d = 4) {
+module.exports = function alphabeta_search(game, state, d = 3) {
   const player = game.to_move(state);
   const eval_fn = (eval_state) => game.utility(eval_state);
   const cutoff_test = (cutoff_state, depth) => {
@@ -65,5 +51,5 @@ module.exports = function alphabeta_search(game, state, d = 4) {
     .map(calc)
     .sort((a, b) => (b.val - a.val));
 
-  return res[0].pos;
+  return res.length > 0 ? res[0].pos : null;
 };

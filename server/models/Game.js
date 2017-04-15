@@ -1,5 +1,6 @@
 const R = require('ramda');
 const {
+  EMPTY,
   WIN_COLS_POS,
   WIN_ROWS_POS,
   WIN_DIA_POS
@@ -31,7 +32,7 @@ module.exports = class Game {
     const player = state.turn;
     board.push({ pos, player });
     const turn = this.to_move(state);
-    const utility = this.compute_utility(state, pos, player);
+    const utility = this.compute_utility(board, player);
     return new State(turn, board, utility);
   }
   utility(state) {
@@ -46,9 +47,9 @@ module.exports = class Game {
       .map(R.prop('pos'));
   }
 
-  compute_utility(state, pos, player) {
+  compute_utility(board, player) {
     const win_pos = [...WIN_COLS_POS, ...WIN_ROWS_POS, ...WIN_DIA_POS];
-    if (win_pos.map(n_in_a_row(state.board, player)).some(i => i)) {
+    if (win_pos.map(n_in_a_row(board, player)).some(i => i)) {
       return player === this.ai ? 1 : -1;
     } else {
       return 0;
