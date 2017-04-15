@@ -1,5 +1,8 @@
 <div class="sa-board-tile" layout="column" layout-align="center center" ng-click="$ctrl.onClick()">
-    <div ng-bind="$ctrl.player || ''">
-        
+    <div>
+        <i ng-show="!$ctrl.clicked && $ctrl.player === 'X'" class="fa fa-user" aria-hidden="true"></i>
+        <i ng-show="!$ctrl.clicked && $ctrl.player === 'O'" class="fa fa-android" aria-hidden="true"></i>
+        <i ng-show="!$ctrl.clicked && $ctrl.player === 'E'" class="fa fa-question" aria-hidden="true"></i>
+        <i ng-show="$ctrl.clicked" class="fa fa-spinner" aria-hidden="true"></i>
     </div>
 </div>

@@ -1,16 +1,17 @@
-<div class="saBoard" layout="column">
-    <div ng-hide="$ctrl.finished" class="board" layout="column">
+<div class="sa-board" layout="column">
+    <div class="board" layout="column">
         <div class="board-container" layout="row" layout-wrap>
             <div flex="33" ng-repeat="cell in $ctrl.curr_state.board" layout="column" layout-align="center center">
-                <sa-board-tile tile-click="$ctrl.tileClick(cell.pos)" pos="cell.pos" player="cell.player"></sa-board-tile>
+                <sa-board-tile disable="$ctrl.finished" tile-click="$ctrl.tileClick(cell.pos)" pos="cell.pos" player="cell.player"></sa-board-tile>
             </div>
         </div>
 
     </div>
-    <div ng-show="$ctrl.finished">
-        <div ng-show="$ctrl.curr_state.utility === 1">Lost</div>
-        <div ng-show="$ctrl.curr_state.utility === 0">draw</div>
-        <div ng-show="$ctrl.curr_state.utility === -1">Won</div>
-        <md-button type="button" ng-click="$ctrl.restart()">Restart</md-button>
+    <!--<div ng-show="$ctrl.finished">-->
+    <div class="sa-board-status" layout="column" layout-align="center center" layout-margin>
+        <div ng-show="$ctrl.curr_state.utility === 1">You lost</div>
+        <div ng-show="$ctrl.curr_state.utility === 0">It's a draw</div>
+        <div ng-show="$ctrl.curr_state.utility === -1">You won !</div>
+        <md-button type="button" class="md-raised md-primary" ng-click="$ctrl.restart()">Restart</md-button>
     </div>
 </div>

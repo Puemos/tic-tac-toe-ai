@@ -7,7 +7,8 @@ const saBoardTileComponent = {
   bindings: {
     pos: '<',
     player: '<',
-    tileClick: '&'
+    tileClick: '&',
+    disable: '<'
   },
   template,
   controller,

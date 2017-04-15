@@ -10,12 +10,15 @@ class SaBoardController {
     this.restart();
   }
   tileClick(pos) {
+    if (this.fetching) { return null; }
+    this.fetching = true;
     this.Ai.move(pos, this.curr_state)
       .then(state => {
         state.board.sort((a, b) => a.pos - b.pos);
         this.curr_state = state;
         this.moves = this.count_moves(this.curr_state);
         this.finished = this.curr_state.utility !== 0 || this.moves === 0;
+        this.fetching = false;
       });
   }
   restart() {
