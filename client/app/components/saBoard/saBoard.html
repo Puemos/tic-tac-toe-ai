@@ -1,37 +1,10 @@
 <div class="saBoard" layout="column">
     <div class="board" layout="column">
-        <div layout="row">
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
+        <div class="board-container" layout="row" layout-wrap>
+            <div flex="33" ng-repeat="cell in $ctrl.state.board" layout="column" layout-align="center center" >
+                <sa-board-tile tile-click="$ctrl.tileClick(cell.pos)" pos="cell.pos" player="cell.player"></sa-board-tile>
             </div>
         </div>
-        <div layout="row">
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-        </div>
-        <div layout="row">
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-            <div layout="column">
-                <sa-board-tile value=""></sa-board-tile>
-            </div>
-        </div>
+
     </div>
 </div>

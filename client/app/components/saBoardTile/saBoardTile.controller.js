@@ -1,9 +1,11 @@
 class SaBoardTileController {
   constructor() {
+    "ngInject";
     this.name = 'saBoardTile';
+
   }
-  onClick(){
-    
+  onClick() {
+    this.tileClick({ pos: this.pos });
   }
 }
 

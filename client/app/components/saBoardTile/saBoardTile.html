@@ -1,3 +1,4 @@
-<div class="saBoardTile" ng-click="$ctrl.onClick()">
-  {{$ctrl.value || ' E '}}
+<div class="sa-board-tile" layout="column" layout-align="center center" ng-click="$ctrl.onClick()">
+    <div ng-bind="$ctrl.player || ' E '">
+    </div>
 </div>

@@ -4,7 +4,9 @@ import './saBoard.scss';
 
 const saBoardComponent = {
   restrict: 'E',
-  bindings: {},
+  bindings: {
+    state: '<'
+  },
   template,
   controller
 };

@@ -1,13 +1,10 @@
 import Config from '../../config';
 
-const ApiService = function($q,$localStorage,$http) {
+const ApiService = function($q, $localStorage, $http) {
   "ngInject";
 
-  const req = (method) => ({ url, data, params, auth = true, token = null, host = Config.API_URL }) => {
-    const headers = (auth && (token || $localStorage.token)) ? {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + (token ? token : $localStorage.token)
-    } : {
+  const req = (method) => ({ url, data, params, host = Config.API_URL }) => {
+    const headers = {
       'Content-Type': 'application/json'
     };
     const req = {
@@ -34,7 +31,7 @@ const ApiService = function($q,$localStorage,$http) {
   const del = req('DELETE');
   const put = req('PUT');
 
-  return {get, post, del, put };
+  return { get, post, del, put };
 };
 
 export default ApiService;

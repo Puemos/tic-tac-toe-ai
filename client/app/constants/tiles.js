@@ -1,3 +1,0 @@
-export const TILES = {
-    CHOOSE_POSITION: 'CHOOSE_POSITION'
-};

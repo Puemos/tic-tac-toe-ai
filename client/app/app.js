@@ -8,13 +8,10 @@ import { name as ngStorage } from 'ngstorage';
 import uiRouter from 'angular-ui-router';
 import ngSanitize from 'angular-sanitize';
 
-
-
 import Services from './services';
 import Views from './views';
 import Components from './components';
 import AppComponent from './app.component';
-
 
 angular.module('app', [
   uiRouter,

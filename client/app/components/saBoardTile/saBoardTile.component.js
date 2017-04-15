@@ -5,10 +5,12 @@ import './saBoardTile.scss';
 const saBoardTileComponent = {
   restrict: 'E',
   bindings: {
-    value: '<'
+    pos: '<',
+    player: '<',
+    tileClick: '&'
   },
   template,
-  controller
+  controller,
 };
 
 export default saBoardTileComponent;

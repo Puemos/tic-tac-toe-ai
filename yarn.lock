@@ -1044,22 +1044,7 @@ blueimp-tmpl@^2.5.5:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/blueimp-tmpl/-/blueimp-tmpl-2.5.7.tgz#33fb12c139d65512ae40afbd8e2def8d9db96490"
 
-body-parser@^1.12.4:
-  version "1.15.2"
-  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.15.2.tgz#d7578cf4f1d11d5f6ea804cef35dc7a7ff6dae67"
-  dependencies:
-    bytes "2.4.0"
-    content-type "~1.0.2"
-    debug "~2.2.0"
-    depd "~1.1.0"
-    http-errors "~1.5.0"
-    iconv-lite "0.4.13"
-    on-finished "~2.3.0"
-    qs "6.2.0"
-    raw-body "~2.1.7"
-    type-is "~1.6.13"
-
-body-parser@^1.17.1:
+body-parser@^1.12.4, body-parser@^1.17.1:
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.17.1.tgz#75b3bc98ddd6e7e0d8ffe750dfaca5c66993fa47"
   dependencies:
@@ -3009,10 +2994,6 @@ i@0.3.x:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/i/-/i-0.3.5.tgz#1d2b854158ec8169113c6cb7f6b6801e99e211d5"
 
-iconv-lite@0.4.13:
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
-
 iconv-lite@0.4.15:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
@@ -3100,7 +3081,7 @@ interpret@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
 
-invariant@^2.2.0:
+invariant@^2.1.0, invariant@^2.2.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.1.tgz#b097010547668c7e337028ebe816ebe36c8a8d54"
   dependencies:
@@ -3556,9 +3537,24 @@ localtunnel@1.8.2:
     request "2.78.0"
     yargs "3.29.0"
 
+lodash-es@^4.2.1:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
+
+lodash._baseassign@^3.0.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/lodash._baseassign/-/lodash._baseassign-3.2.0.tgz#8c38a099500f215ad09e59f1722fd0c52bfe0a4e"
+  dependencies:
+    lodash._basecopy "^3.0.0"
+    lodash.keys "^3.0.0"
+
 lodash._basecopy@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
+
+lodash._basefor@^3.0.0:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/lodash._basefor/-/lodash._basefor-3.0.3.tgz#7550b4e9218ef09fad24343b612021c79b4c20c2"
 
 lodash._basetostring@^3.0.0:
   version "3.0.1"
@@ -3567,6 +3563,18 @@ lodash._basetostring@^3.0.0:
 lodash._basevalues@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._basevalues/-/lodash._basevalues-3.0.0.tgz#5b775762802bde3d3297503e26300820fdf661b7"
+
+lodash._bindcallback@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
+
+lodash._createassigner@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lodash._createassigner/-/lodash._createassigner-3.1.1.tgz#838a5bae2fdaca63ac22dee8e19fa4e6d6970b11"
+  dependencies:
+    lodash._bindcallback "^3.0.0"
+    lodash._isiterateecall "^3.0.0"
+    lodash.restparam "^3.0.0"
 
 lodash._getnative@^3.0.0:
   version "3.9.1"
@@ -3592,6 +3600,14 @@ lodash._root@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._root/-/lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692"
 
+lodash.assign@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-3.2.0.tgz#3ce9f0234b4b2223e296b8fa0ac1fee8ebca64fa"
+  dependencies:
+    lodash._baseassign "^3.0.0"
+    lodash._createassigner "^3.0.0"
+    lodash.keys "^3.0.0"
+
 lodash.assign@^4.0.3, lodash.assign@^4.0.6, lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
@@ -3608,6 +3624,10 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
+lodash.curry@^4.0.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.curry/-/lodash.curry-4.1.1.tgz#248e36072ede906501d75966200a86dab8b23170"
+
 lodash.escape@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lodash.escape/-/lodash.escape-3.2.0.tgz#995ee0dc18c1b48cc92effae71a10aab5b487698"
@@ -3622,7 +3642,7 @@ lodash.isarguments@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
 
-lodash.isarray@^3.0.0:
+lodash.isarray@^3.0.0, lodash.isarray@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
 
@@ -3633,6 +3653,22 @@ lodash.isempty@^4.2.1:
 lodash.isfinite@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/lodash.isfinite/-/lodash.isfinite-3.3.2.tgz#fb89b65a9a80281833f0b7478b3a5104f898ebb3"
+
+lodash.isfunction@^3.0.6:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz#4db709fc81bc4a8fd7127a458a5346c5cdce2c6b"
+
+lodash.isobject@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/lodash.isobject/-/lodash.isobject-3.0.2.tgz#3c8fb8d5b5bf4bf90ae06e14f2a530a4ed935e1d"
+
+lodash.isplainobject@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz#9a8238ae16b200432960cd7346512d0123fbf4c5"
+  dependencies:
+    lodash._basefor "^3.0.0"
+    lodash.isarguments "^3.0.0"
+    lodash.keysin "^3.0.0"
 
 lodash.isplainobject@^4.0.4:
   version "4.0.6"
@@ -3649,6 +3685,17 @@ lodash.keys@^3.0.0:
     lodash._getnative "^3.0.0"
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
+
+lodash.keysin@^3.0.0:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.keysin/-/lodash.keysin-3.0.8.tgz#22c4493ebbedb1427962a54b445b2c8a767fb47f"
+  dependencies:
+    lodash.isarguments "^3.0.0"
+    lodash.isarray "^3.0.0"
+
+lodash.map@^4.4.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.map/-/lodash.map-4.6.0.tgz#771ec7839e3473d9c4cde28b19394c3562f4f6d3"
 
 lodash.mapvalues@^4.4.0:
   version "4.6.0"
@@ -3691,7 +3738,7 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
-lodash@4.17.4, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.3.0:
+lodash@4.17.4, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3722,7 +3769,7 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.2.0.tgz#69a65aad3de542cf4ee0f4fe74e8e33c709ccb0f"
   dependencies:
@@ -3843,25 +3890,15 @@ micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.7:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-mime-db@~1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.24.0.tgz#e2d13f939f0016c6e4e9ad25a8652f126c467f0c"
-
 mime-db@~1.27.0:
   version "1.27.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
 
-mime-types@^2.1.11, mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.7:
+mime-types@^2.1.11, mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.7:
   version "2.1.15"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed"
   dependencies:
     mime-db "~1.27.0"
-
-mime-types@~2.1.11:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.12.tgz#152ba256777020dd4663f54c2e7bc26381e71729"
-  dependencies:
-    mime-db "~1.24.0"
 
 mime@1.2.4:
   version "1.2.4"
@@ -4006,6 +4043,20 @@ ng-annotate@^1.0.2:
     stringmap "~0.2.2"
     stringset "~0.2.1"
     tryor "~0.1.2"
+
+ng-redux@^3.4.0-beta.1:
+  version "3.4.0-beta.1"
+  resolved "https://registry.yarnpkg.com/ng-redux/-/ng-redux-3.4.0-beta.1.tgz#9bc1636b390fed538dccca3dfaee22a7b327aff6"
+  dependencies:
+    invariant "^2.1.0"
+    lodash.assign "^3.2.0"
+    lodash.curry "^4.0.1"
+    lodash.isarray "^3.0.4"
+    lodash.isfunction "^3.0.6"
+    lodash.isobject "^3.0.2"
+    lodash.isplainobject "^3.2.0"
+    lodash.map "^4.4.0"
+    redux "^3.0.0"
 
 ngstorage@0.3.11:
   version "0.3.11"
@@ -4972,10 +5023,6 @@ qs@0.4.x:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-0.4.2.tgz#3cac4c861e371a8c9c4770ac23cda8de639b8e5f"
 
-qs@6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.0.tgz#3b7848c03c2dece69a9522b0fae8c4126d745f3b"
-
 qs@6.2.1, qs@~6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
@@ -5017,14 +5064,6 @@ randomatic@^1.1.3:
 range-parser@^1.0.3, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
-
-raw-body@~2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.1.7.tgz#adfeace2e4fb3098058014d08c072dcc59758774"
-  dependencies:
-    bytes "2.4.0"
-    iconv-lite "0.4.13"
-    unpipe "1.0.0"
 
 raw-body@~2.2.0:
   version "2.2.0"
@@ -5164,6 +5203,15 @@ reduce-function-call@^1.0.1:
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.1.tgz#fa02e126e695824263cab91d3a5b0fdc1dd27a9a"
   dependencies:
     balanced-match "~0.1.0"
+
+redux@^3.0.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.6.0.tgz#887c2b3d0b9bd86eca2be70571c27654c19e188d"
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.2"
 
 regenerate@^1.2.1:
   version "1.3.1"
@@ -5916,6 +5964,10 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
+symbol-observable@^1.0.2:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
 table@^3.7.8:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/table/-/table-3.8.3.tgz#2bbc542f0fda9861a755d3947fefd8b3f513855f"
@@ -6080,7 +6132,7 @@ type-detect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-1.0.0.tgz#762217cc06db258ec48908a1298e8b95121e8ea2"
 
-type-is@~1.6.13, type-is@~1.6.14:
+type-is@~1.6.14:
   version "1.6.15"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.15.tgz#cab10fb4909e441c82842eafe1ad646c81804410"
   dependencies:
