@@ -1,0 +1,16 @@
+<div class="app" ng-class="'page-' + $ctrl.getPageName()">
+    <navbar ng-if='$ctrl.shouldShowBars'></navbar>
+
+    <backdrop ng-if="$ctrl.transition">
+        <div layout="row" layout-fill layout-align="center center">
+            <loading class="trasition-loader"></loading>
+        </div>
+    </backdrop>
+    <backdrop ng-if="$ctrl.error">
+        <div layout="row" layout-fill layout-align="center center">
+            the page you requested is not exist, Please come back <span ui-sref="home" style="cursor:pointer; color:#1cc6e7;">&nbsp;Home</span>
+        </div>
+    </backdrop>
+    <div class="main-body" ui-view></div>
+    <foot ng-hide="$ctrl.transition" ng-if='$ctrl.shouldShowBars'><foot/>
+</div>

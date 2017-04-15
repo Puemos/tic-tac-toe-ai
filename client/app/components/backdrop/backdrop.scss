@@ -1,0 +1,10 @@
+backdrop {
+    >.root {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background-color: #0c0f10;
+        z-index: 3;
+    }
+}
