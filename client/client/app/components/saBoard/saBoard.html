@@ -7,8 +7,7 @@
         </div>
 
     </div>
-    <!--<div ng-show="$ctrl.finished">-->
-    <div class="sa-board-status" layout="column" layout-align="center center" layout-margin>
+    <div ng-show="$ctrl.finished" class="sa-board-status" layout="column" layout-align="center center" layout-margin>
         <div ng-show="$ctrl.curr_state.utility === 1">You lost</div>
         <div ng-show="$ctrl.curr_state.utility === 0">It's a draw</div>
         <div ng-show="$ctrl.curr_state.utility === -1">You won !</div>
