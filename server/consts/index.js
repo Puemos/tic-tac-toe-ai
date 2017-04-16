@@ -1,8 +1,7 @@
-module.exports.PLAYER_1 = 'X';
-module.exports.PLAYER_2 = 'O';
+module.exports.PLAYER_HUMAN = 'X';
+module.exports.PLAYER_AI = 'O';
 module.exports.EMPTY = 'E';
 module.exports.DRAW = 'D';
-module.exports.ILLEGAL_MOVE = 'illegal move';
 
 
 module.exports.WIN_COLS_POS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];

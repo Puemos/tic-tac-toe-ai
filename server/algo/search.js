@@ -1,3 +1,5 @@
+const R = require('ramda');
+
 function max_value(game, state, alpha, beta, depth, cutoff_test, eval_fn) {
   if (cutoff_test(state, depth)) {
     return eval_fn(state);
@@ -59,4 +61,4 @@ function alphabeta_search(game, state, d = 4) {
 
   return res.length > 0 ? res[0].pos : null;
 }
-module.exports = alphabeta_search;
+module.exports = R.memoize(alphabeta_search);

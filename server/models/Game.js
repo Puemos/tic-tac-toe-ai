@@ -3,10 +3,10 @@ const {
   WIN_COLS_POS,
   WIN_ROWS_POS,
   WIN_DIA_POS,
-  ILLEGAL_MOVE,
   EMPTY
 } = require('../consts');
 const State = require('./State');
+const IllegalMoveError = require('../Errors/IllegalMoveError');
 
 const n_in_a_row = (board, player) => positions => {
   const result = board
@@ -31,7 +31,7 @@ module.exports = class Game {
   make_move(state, move) {
 
     if (state.board.find(cell => cell.pos === move).player !== EMPTY) {
-      throw Error(ILLEGAL_MOVE);
+      throw IllegalMoveError();
     }
     const board = state.board.filter(cell => cell.pos !== move);
     const player = state.turn;
