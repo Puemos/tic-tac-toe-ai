@@ -83,7 +83,8 @@
     "start:dev": "better-npm-run start:dev",
     "build:dev": "better-npm-run build:dev",
     "build:prod": "better-npm-run build:prod",
-    "test": "better-npm-run test"
+    "test": "better-npm-run test",
+    "postinstall": "better-npm-run build:prod"
   },
   "betterScripts": {
     "start": {
