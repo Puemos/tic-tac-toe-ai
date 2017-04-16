@@ -3,14 +3,14 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const historyApiFallback = require('connect-history-api-fallback');
+const { create_middleware, create_compiler } = require('./server/webpack');
 
 const app = express();
 
-const { middleware, compiler } = require('./server/webpack');
 const turn = require('./server/controllers/turn');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 2000 : 80;
+const port = isDeveloping ? 2000 : 8000;
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -21,9 +21,12 @@ app.use(function(req, res, next) {
 app.post('/api/turn', turn);
 
 if (isDeveloping) {
+
   app.use(historyApiFallback({
     verbose: false
   }));
+  const compiler = create_compiler();
+  const middleware = create_middleware(compiler);
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
 
@@ -37,6 +40,4 @@ if (isDeveloping) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 }
-app.listen(port, function() {
-  console.log('Tic Tac Toe !!');
-});
+app.listen(port, function() {});

@@ -16,9 +16,12 @@ const paths = {
 
 const config = configDev;
 config.entry.app = ['webpack-hot-middleware/client?reload=true', ...paths.entry];
-const compiler = webpack(config);
-compiler.apply(new ProgressBarPlugin());
-const middleware = webpackDevMiddleware(compiler, {
+const create_compiler = () => {
+  const compiler = webpack(config);
+  compiler.apply(new ProgressBarPlugin());
+  return compiler;
+};
+const create_middleware = compiler => webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
   contentBase: 'src',
   stats: {
@@ -32,6 +35,6 @@ const middleware = webpackDevMiddleware(compiler, {
 });
 
 module.exports = {
-  middleware,
-  compiler
+  create_middleware,
+  create_compiler
 };
