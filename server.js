@@ -10,7 +10,7 @@ const app = express();
 const turn = require('./server/controllers/turn');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 2000 : 8000;
+const port = isDeveloping ? 2000 : 80;
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
