@@ -10,7 +10,7 @@ const { middleware, compiler } = require('./server/webpack');
 const turn = require('./server/controllers/turn');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
-
+const port = isDeveloping ? 2000 : 80;
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -37,6 +37,6 @@ if (isDeveloping) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 }
-app.listen(2000, function() {
+app.listen(port, function() {
   console.log('Tic Tac Toe !!');
 });
