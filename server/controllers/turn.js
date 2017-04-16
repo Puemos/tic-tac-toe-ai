@@ -17,6 +17,9 @@ function handler(req, res) {
   const state = new State(raw_state.turn, raw_state.board, raw_state.utility);
   try {
     const new_state = game.make_move(state, Number(move));
+    if (new_state.utility !== 0) {
+      return res.json(new_state);
+    }
     const ai_move = search(game, new_state);
     if (ai_move === null) {
       return res.json(new_state);

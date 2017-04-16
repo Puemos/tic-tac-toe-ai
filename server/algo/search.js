@@ -37,7 +37,7 @@ function min_value(game, state, alpha, beta, depth, cutoff_test, eval_fn) {
   return v;
 }
 
-function alphabeta_search(game, state, d = 3) {
+function alphabeta_search(game, state, d = 4) {
   const eval_fn = (eval_state) => game.utility(eval_state);
   const cutoff_test = (cutoff_state, depth) => {
     return (depth > d || game.terminal_test(cutoff_state));
